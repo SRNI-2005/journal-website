@@ -7,6 +7,8 @@ import { getAuth, onAuthStateChanged } from "firebase/auth"; // Import necessary
 import Sidebar from "../../components/Sidebar/Sidebar"
 import UploadPopup from '../UploadPopup/UploadPopup'; // Import your upload pop-up component
 import LoginModal from '../LoginModal/LoginModal'; // Import your login modal
+import AuthorGuidelines from "../../pages/Guidelines/guidelines";
+import Publication from '../../pages/Publication/publication';
 
 const Hero = () => {
   const [mainContent, setMainContent] = useState(<JournalCard />); // Default content
@@ -61,7 +63,8 @@ const Hero = () => {
     <div className="hero-section">
         <Sidebar/>
       <div className="main-content">
-        {mainContent} {/* Render the current main content */}
+        <AuthorGuidelines/>
+        {/* <Publication/> */}
       </div>
 
       {/* Render upload pop-up if open */}
